@@ -15,16 +15,27 @@ app.use(
 
 app.use(express.json());
 
+<<<<<<< HEAD
 // Connect to MongoDB
+=======
+
+>>>>>>> ce8808b511d5faa17d24763437866eee39c24269
 mongoose
   .connect(process.env.MONGO_URI)
   .then(() => console.log("MongoDB connected"))
   .catch((err) => console.error("MongoDB connection error:", err));
 
+<<<<<<< HEAD
 app.get("/", (req, res) => {
   res.send("Expense Tracker API is running");
 });
 
+=======
+
+app.get("/", (req, res) => {
+  res.send("Expense Tracker API is running");
+});
+>>>>>>> ce8808b511d5faa17d24763437866eee39c24269
 
 app.use("/api/auth", require("./routes/auth"));
 app.use("/api/transaction", require("./routes/transaction"));
